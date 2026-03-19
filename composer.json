@@ -1,183 +1,56 @@
 {
-  "name": "quellabs/framework-dev",
-  "description": "Quellabs Framework Development Environment",
-  "type": "project",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "repositories": [
+  "name": "quellabs/canvas-payments-paypal",
+  "description": "PayPal Orders v2 REST API payment gateway integration for the Canvas PHP framework",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
     {
-      "type": "path",
-      "url": "./packages/annotation-reader"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-objectquel"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-smarty"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-twig"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-blade"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-latte"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-plates"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-skeleton"
-    },
-    {
-      "type": "path",
-      "url": "./packages/contracts"
-    },
-    {
-      "type": "path",
-      "url": "./packages/cache"
-    },
-    {
-      "type": "path",
-      "url": "./packages/dependency-injection"
-    },
-    {
-      "type": "path",
-      "url": "./packages/discover"
-    },
-    {
-      "type": "path",
-      "url": "./packages/objectquel"
-    },
-    {
-      "type": "path",
-      "url": "./packages/sculpt"
-    },
-    {
-      "type": "path",
-      "url": "./packages/signal-hub"
-    },
-    {
-      "type": "path",
-      "url": "./packages/support"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-database"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-payments"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-payments-contracts"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-payments-contracts"
-    },
-    {
-      "type": "path",
-      "url": "./packages/canvas-payments-paypal-express"
+      "name": "Floris van den Berg",
+      "email": "info@quellabs.com"
     }
   ],
+  "keywords": [
+    "paypal",
+    "paypal-rest",
+    "paypal-orders",
+    "payments",
+    "payment gateway",
+    "canvas",
+    "canvas-payments"
+  ],
+  "support": {
+    "email": "support@quellabs.com",
+    "issues": "https://github.com/quellabs/canvas-payments-paypal/issues",
+    "forum": "https://github.com/quellabs/canvas-payments-paypal/discussions",
+    "wiki": "https://github.com/quellabs/canvas-payments-paypal/wiki",
+    "docs": "https://canvasphp.com/docs",
+    "source": "https://github.com/quellabs/canvas-payments-paypal"
+  },
   "require": {
-    "php": "^8.3",
-    "ext-curl": "*",
-    "monolog/monolog": "*",
-    "symfony/http-foundation": "*",
+    "php": "^8.2",
     "symfony/http-client": "*",
-    "dragonmantank/cron-expression": "*",
-    "robmorgan/phinx": "*",
-    "cakephp/database": "*",
-    "softcreatr/jsonpath": "*",
-    "composer-plugin-api": "^2.0",
-    "quellabs/canvas-authorization": "dev-feature/stub"
-  },
-  "suggest": {
-    "ext-redis": "Required for Redis cache driver",
-    "ext-memcached": "Required for Memcached cache driver"
-  },
-  "require-dev": {
-    "phpstan/phpstan": "*",
-    "phpunit/phpunit": "^9",
-    "rector/rector": "*",
-    "composer/composer": "^2.0",
-    "quellabs/sculpt": "dev-main as 1.999.999",
-    "quellabs/contracts": "dev-main as 1.999.999",
-    "quellabs/support": "dev-main as 1.999.999",
-    "quellabs/annotation-reader": "dev-main as 1.999.999",
-    "quellabs/canvas": "dev-main as 1.999.999",
-    "quellabs/canvas-objectquel": "dev-main as 1.999.999",
-    "quellabs/canvas-smarty": "dev-main as 1.999.999",
-    "quellabs/canvas-twig": "dev-main as 1.999.999",
-    "quellabs/canvas-blade": "dev-main as 1.999.999",
-    "quellabs/canvas-latte": "dev-main as 1.999.999",
-    "quellabs/canvas-plates": "dev-main as 1.999.999",
-    "quellabs/canvas-skeleton": "dev-main as 1.999.999",
-    "quellabs/canvas-database": "dev-main as 1.999.999",
-    "quellabs/dependency-injection": "dev-main as 1.999.999",
-    "quellabs/discover": "dev-main as 1.999.999",
-    "quellabs/objectquel": "dev-main as 1.999.999",
-    "quellabs/signal-hub": "dev-main as 1.999.999",
-    "quellabs/cache": "dev-main as 1.999.999",
-    "quellabs/canvas-payments": "dev-main as 1.999.999",
-    "quellabs/canvas-payments-contracts": "dev-main as 1.999.999",
-    "quellabs/canvas-payments-mollie": "dev-main as 1.999.999",
-    "quellabs/canvas-payments-paypal-express": "dev-main as 1.999.999"
+    "quellabs/support": "*",
+    "quellabs/contracts": "*",
+    "quellabs/canvas-payments-contracts": "*"
   },
   "autoload": {
     "psr-4": {
-      "App\\": "src/",
-      "Quellabs\\Contracts\\": "packages/contracts/src/",
-      "Quellabs\\Support\\": "packages/support/src/",
-      "Quellabs\\Discover\\": "packages/discover/src/",
-      "Quellabs\\DependencyInjection\\": "packages/dependency-injection/src/",
-      "Quellabs\\AnnotationReader\\": "packages/annotation-reader/src/",
-      "Quellabs\\Sculpt\\": "packages/sculpt/src/",
-      "Quellabs\\ObjectQuel\\": "packages/objectquel/src/",
-      "Quellabs\\SignalHub\\": "packages/signal-hub/src/",
-      "Quellabs\\Canvas\\": "packages/canvas/src/",
-      "Quellabs\\CanvasDatabase\\": "packages/canvas-database/src/",
-      "Quellabs\\CanvasObjectQuel\\": "packages/canvas-objectquel/src/",
-      "Quellabs\\Canvas\\Smarty\\": "packages/canvas-smarty/src/",
-      "Quellabs\\Canvas\\Twig\\": "packages/canvas-twig/src/",
-      "Quellabs\\Canvas\\Blade\\": "packages/canvas-blade/src/",
-      "Quellabs\\Canvas\\Latte\\": "packages/canvas-latte/src/",
-      "Quellabs\\Canvas\\Plates\\": "packages/canvas-plates/src/",
-      "Quellabs\\Canvas\\Cache\\": "packages/cache/src/",
-      "Quellabs\\Payments\\": "packages/canvas-payments/src/",
-      "Quellabs\\Payments\\Contracts\\": "packages/canvas-payments-contracts/src/",
-      "Quellabs\\Payments\\Mollie\\": "packages/canvas-payments-mollie/src/",
-      "Quellabs\\Payments\\PaypalExpress\\": "packages/canvas-payments-paypal-express/src/"
-    },
-    "files": [
-      "packages/support/src/bootstrap.php"
-    ]
-  },
-  "config": {
-    "allow-plugins": {
-      "pestphp/pest-plugin": true,
-      "quellabs/discover": false
+      "Quellabs\\Payments\\Paypal\\": "src/"
     }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "php -r \"if (!file_exists('config/paypal.php') && !copy('vendor/quellabs/canvas-payments-paypal/config/paypal.php', 'config/paypal.php')) { echo 'Warning: Could not publish PayPal config file.' . PHP_EOL; }\""
+    ]
   },
   "extra": {
     "discover": {
-      "sculpt": {
-        "provider": "App\\Sculpt\\ServiceProvider"
+      "canvas": {
+        "controller": "Quellabs\\Payments\\Paypal\\PaypalController"
+      },
+      "payments": {
+        "provider": "Quellabs\\Payments\\Paypal\\Driver",
+        "config": "config/paypal.php"
       }
     }
   }
